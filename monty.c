@@ -8,6 +8,7 @@ int main(int argc, char *argv[])
 	unsigned int line_number = 0;
 	char opcode[100];
 	int value = 0;
+	char *trimmed_line;
 
 	if (argc != 2)
 	{
@@ -26,6 +27,19 @@ int main(int argc, char *argv[])
 	while (fgets(line, sizeof(line), file))
 	{
 		line_number++;
+
+		/*Skip leading spaces*/
+		trimmed_line = line;
+		while (*trimmed_line == ' ' || *trimmed_line == '\t')
+		{
+			trimmed_line++;
+		}
+
+		/*Skip comment lines*/
+		if (*trimmed_line == '#' || *trimmed_line == '\n')
+		{
+			continue; /*Skip this line, treat it as a comment*/
+		}
 
 		/* Parse the opcode and value (if any)*/
 		sscanf(line, "%s", opcode);
