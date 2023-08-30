@@ -1,13 +1,13 @@
 #include "monty.h"
 
-void stack(stack_t **stack, unsigned int line_number)
+void set_stack_mode(stack_t **stack, unsigned int line_number)
 {
 	(void)stack; /*Unused parameter*/
 	(void)line_number; /*Unused parameter*/
 	/*The default behavior is already LIFO (stack), so nothing needs to be done*/
 }
 
-void queue(stack_t **stack, unsigned int line_number)
+void set_queue_mode(stack_t **stack, unsigned int line_number)
 {
 	stack_t *last;
 	stack_t *second_last;

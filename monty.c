@@ -112,11 +112,11 @@ int main(int argc, char *argv[])
 		}
 		else if (strcmp(opcode, "stack") == 0)
 		{
-			stack(&stack, line_number);
+			set_stack_mode(&stack, line_number);
 		}
 		else if (strcmp(opcode, "queue") == 0)
 		{
-			queue(&stack, line_number);
+			set_queue_mode(&stack, line_number);
 		}
 		else
 		{
