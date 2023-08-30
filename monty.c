@@ -118,6 +118,14 @@ int main(int argc, char *argv[])
 		{
 			set_queue_mode(&stack, line_number);
 		}
+		else if (strcmp(opcode, "mul_digits") == 0)
+		{
+			mul_digits(&stack, line_number);
+		}
+		else if (strcmp(opcode, "mul_digits_nl") == 0)
+		{
+			mul_digits2(&stack, line_number);
+		}
 		else
 		{
 			fprintf(stderr, "L%u: unknown instruction %s\n", line_number, opcode);
