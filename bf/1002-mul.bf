@@ -8,5 +8,3 @@
 [-<+>      ; Multiply second and third cells, store result in second cell
 <<<<<<     ; Move back to first cell
 .          ; Print result (as an ASCII character)
-++++       ; Print newline (10)
-.          ; Print newline
